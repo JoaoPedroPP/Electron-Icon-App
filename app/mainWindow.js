@@ -8,7 +8,8 @@ class MainWindow extends BrowserWindow {
             height:500,
             frame:false,
             show:false,
-            resizable:false
+            resizable:false,
+            webPreferences: { backgroundThrottling: false}
         });
         this.loadURL(url);
         this.on('blur', this.onBlur.bind(this));
